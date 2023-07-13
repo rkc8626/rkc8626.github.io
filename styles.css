@@ -83,6 +83,36 @@ h1 {
   border-bottom: 1px solid #d5d5d5;
 }
 
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  padding: 20px;
+  text-align: center;
+  flex-shrink: 0;
+  border-bottom: 1px solid #d5d5d5;
+  border-top: 1px solid #d5d5d5;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 /* for resume */
 iframe {
   width: 95%;
