@@ -455,7 +455,7 @@ div#profile {
   background-color: #0056b3; /* Darker shade for hover effect */
 }
 
-#publications {
+#publications, #Service{
   display: flex; /* Aligns child elements (left and right sections) horizontally */
   background-color: white;
   padding: 80px 100px 80px 50px;
