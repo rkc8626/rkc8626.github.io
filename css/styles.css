@@ -218,7 +218,7 @@ div#profile {
   color: #1a73e8;           /* Keeps the text color black even after the link is visited */
 }
 
-.name, div#about h1, section#teaching h2, section#research h2, section#project h2, section#publications h2, section#talks h2 {
+.name, div#about h1, section#teaching h2, section#research h2, section#project h2, section#publications h2, section#service h2, section#talks h2 {
   font-size: 2.5em;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -455,19 +455,25 @@ div#profile {
   background-color: #0056b3; /* Darker shade for hover effect */
 }
 
-#publications, #Service{
+#publications{
   display: flex; /* Aligns child elements (left and right sections) horizontally */
   background-color: white;
   padding: 80px 100px 80px 50px;
   align-items: flex-start; /* Aligns items at the start of the flex container */
 }
 
-#talks {
+#service{
   display: flex; /* Aligns child elements (left and right sections) horizontally */
-  background-color: white;
+  background-color: #edededa3;
   padding: 80px 100px 80px 50px;
   align-items: flex-start; /* Aligns items at the start of the flex container */
-  background-color: #edededa3;
+}
+
+#talks {
+  display: flex; /* Aligns child elements (left and right sections) horizontally */
+  padding: 80px 100px 80px 50px;
+  align-items: flex-start; /* Aligns items at the start of the flex container */
+  background-color: white;
 }
 
 .left-section {
@@ -529,6 +535,65 @@ div#profile {
   font-size: 1.8em;
   text-align: left-align;
   margin-bottom: 30px;
+}
+
+#service li p {
+  display: inline;
+  margin: 0;
+  font-size: 18px;
+}
+
+#service ul {
+  list-style: none;
+  padding: 0px;
+}
+
+#service li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+#service li:last-child {
+  border-bottom: none;
+}
+
+#service .links {
+  padding-top: 10px;
+}
+
+#service .links a {
+  text-decoration: none;
+  color: #007BFF;
+  margin-right: 10px;
+}
+
+#service .links a:hover {
+  text-decoration: underline;
+}
+
+#service .see-all {
+  display: block;
+  text-decoration: none;
+  color: #007BFF;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#service .see-all:hover {
+  text-decoration: underline;
+}
+
+#service h2 {
+  font-size: 1.8em;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+#service .icon-section {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 24px;
+  color: #007BFF;
 }
 
 footer {
