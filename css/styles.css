@@ -118,7 +118,7 @@ div#about {
   align-items: start;
 }
 
-.fa-solid.fa-robot, .fas.fa-graduation-cap {
+.fa-solid.fa-robot, .fas.fa-graduation-cap, .fa-solid.fa-handshake, .fa-solid.fa-balance-scale, .fa-solid.fa-chart-line {
   font-size: 26.5px;
   width: 33px;
   height: 26.5px;
