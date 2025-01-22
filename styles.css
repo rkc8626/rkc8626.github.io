@@ -1,37 +1,22 @@
 /* Define styles for the header */
 header {
+  text-align: center;
   border-bottom: 1px solid #d5d5d5;
 }
 
-.header nav ul {
-  display: flex;
-}
-
-header ul li:first-child {
-  width: 20%;
-  font-size: 24px;
-}
-
-header ul li:not(:first-child) {
-  font-size: 18px;
-  width: 80% / 5;
-}
 
 header ul li {
+  font-size: 20px;
   display: inline-block;
-  position: relative;
 }
 
 header ul li a {
-  display: block;
   padding: 10px;
-  color: rgb(79, 79, 79);
   font-weight: bold;
 }
 
 a {
   text-decoration: none;
-  color: rgb(79, 79, 79);
 }
 
 a:hover {
@@ -40,8 +25,15 @@ a:hover {
 }
 
 /* Define styles for the content area */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .content {
   display: flex;
+  flex: 1; /* Take up the remaining space */
   position: relative;
 }
 
@@ -52,16 +44,20 @@ main {
 }
 
 #profile {
-  width: 20%;
   padding: 2%;
   text-align: justify;
   text-align: center;
+  background-color: rgb(248, 250, 252);
 }
 
 #profile img {
-  width: 80%;
+  width: 150px;
   border-radius: 100%;
   box-shadow: 0 0 0 4px rgb(255, 255, 255), 0 0 0 5px rgb(79, 79, 79);
+}
+
+#profile p, a {
+  color: black;
 }
 
 main p {
@@ -71,46 +67,14 @@ main p {
 /* Define styles for the footer */
 footer {
   border-top: 1px solid #d5d5d5;
-  color: rgb(79, 79, 79);
-  padding: 5px;
-  height: 50px;
+  height: 10px;
   text-align: center;
 }
 
 h1 {
-  padding: 5px;
-  color: rgb(60, 60, 60);
+  font-size: 23px;
+  padding: 3px;
   border-bottom: 1px solid #d5d5d5;
-}
-
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1 0 auto;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-header, footer {
-  padding: 20px;
-  text-align: center;
-  flex-shrink: 0;
-  border-bottom: 1px solid #d5d5d5;
-  border-top: 1px solid #d5d5d5;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* for resume */
@@ -118,4 +82,113 @@ iframe {
   width: 95%;
   height: 800px;
   padding: 5px;
+}
+
+/* Style for the school divider */
+.school-divider {
+  display: flex;
+  align-items: center;
+  width: 950px;
+  height: 100px;
+  background-color: rgb(248, 250, 252);
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+/* Style for the school symbol */
+.school-symbol {
+  margin-right: 20px;
+}
+
+.school-symbol img{
+  width: 80px;
+  padding: 10px;
+}
+
+/* Style for the school information */
+.school-degree {
+  text-align: left;
+  padding: 10px;
+}
+
+.date-loca {
+  text-align: right;
+  margin-left: auto; /* Add this line to align to the right */
+  padding: 10px;
+}
+
+/* Additional styling for the school name */
+.school-divider h2 {
+  font-size: 18px;
+}
+
+/* Additional styling for the other information */
+.school-divider p {
+  font-size: 16px;
+}
+
+h3 {
+  margin-left: 30px;
+}
+
+
+/* switch for dark and light mode */
+
+/* The switch - the box around the slider */
+.switch {
+  display: block;
+  --width-of-switch: 50px;
+  --height-of-switch: 25px;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 25px;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 5px;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: .4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon,1.4em);
+  width: var(--size-of-icon,1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset,0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+  ;
+ transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+}
+
+input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+  background: #303136;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
