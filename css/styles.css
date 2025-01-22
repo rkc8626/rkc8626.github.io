@@ -1,0 +1,564 @@
+body {
+  background-color: white;
+  font-family: "Helvetica", sans-serif;
+  margin: 0px;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  margin: 0;
+}
+
+h3 {
+  margin-bottom: 15px;
+}
+
+.justified {
+  text-align: justify;
+}
+
+#profile-section img {
+  width: 275px;
+  height: auto;
+}
+
+header {
+  width: 100%;
+  background-color: white; /* Set the background color for the header */
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Adds shadow for better visibility */
+}
+
+#nav-bar {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+#nav-bar h1 {
+  margin-left: 0px;
+  padding-right: 40px;
+}
+
+nav {
+  margin-left: 0;
+  margin-right: 30px;
+}
+
+nav a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 0px 10px;
+  color: black;
+  text-decoration: none;
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #1a73e8;
+}
+
+.active {
+  color: #1a73e8;
+}
+
+#profile-section {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding-right: 100px;
+  padding-left: 50px;
+  padding-bottom: 50px;
+  gap: 35px;
+}
+
+div#about {
+  flex: 0 0 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  flex: 0 0 35%; /* Image container takes up 30% of the space */
+  display: flex; /* Center the image inside the container if needed */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  max-width: 100%;
+  border-radius: 50%;
+  height: auto; /* Maintain aspect ratio */
+  box-sizing: border-box;
+}
+
+#profile-section li, #profile-section {
+  display: flex;
+}
+
+#profile-section, header {
+  align-items: center;
+}
+
+#profile-section ul {
+  padding-inline-start: 5px;
+}
+
+#profile-section li {
+  align-items: start;
+}
+
+.fa-solid.fa-robot, .fas.fa-graduation-cap {
+  font-size: 26.5px;
+  width: 33px;
+  height: 26.5px;
+  margin-right: 15px;
+}
+
+.course, .institution {
+  margin: 0;
+}
+
+.course {
+  margin-bottom: 5px; /* Space between institution and course */
+}
+
+.institution {
+  font-size: 15px;
+}
+
+#profile-section {
+  margin-top: 100px;
+}
+
+#profile-section li, .controls {
+  margin-bottom: 20px;
+}
+
+.controls * {
+  margin-right: 10px;
+}
+
+.shaded {
+  background-color: grey;
+}
+
+.details-container {
+  display: inline-block;
+}
+
+.centered {
+  text-align: center;
+}
+
+body, td {
+  position: relative;
+}
+
+.edu-interest {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.column1 {
+  flex: 0 0 45%;
+  text-align: left;
+}
+
+.column2 {
+  flex: 0 0 55%;
+  text-align: left;
+}
+
+#profile-section .column1 li {
+  display: flex;
+  align-items: center;
+}
+
+#profile-section .details-container .course {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+}
+
+div#profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.email, .university {
+  color: #1a73e8;
+  margin: 5px 0;
+}
+
+.email a, .university a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.teaching-card a {
+  text-decoration: none;  /* Removes underline from all links */
+  color: #1a73e8;           /* Sets the text color to black for all links */
+}
+
+.teaching-card a:visited {
+  color: #1a73e8;           /* Keeps the text color black even after the link is visited */
+}
+
+.name, div#about h1, section#teaching h2, section#research h2, section#project h2, section#publications h2, section#talks h2 {
+  font-size: 2.5em;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 10px 0;
+}
+
+#teaching, #research {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 30px 80px 50px;
+  gap: 35px;
+  background-color: #edededa3;
+}
+
+#project {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 30px 80px 50px;
+  gap: 35px;
+}
+
+.email, .position, .university {
+  font-size: 1.25em;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 10px 0;
+}
+
+#teaching h2, #research h2, #project h2{
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Timeline container styling */
+.timeline-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card1,.card2,.card3 {
+  position: relative;
+}
+
+.card1 .circle,.card2 .circle,.card3 .circle {
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background-color: #1a73e8;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.card2 .circle,.card3 .circle{
+  background-color: transparent;
+  outline: 1px solid #c7ced8;
+}
+
+.card2 .lineToo,.card3 .lineToo{
+  width: 2px;
+  position: absolute;
+  left: -35px;
+  top: 0;
+  height: calc(50% - 10px);
+  background-color: #c7ced8;
+}
+
+.card1 .line,.card2 .line{
+  width: 2px;
+  position: absolute;
+  height:calc(50% + 10px) ;
+  left: -35px;
+  background-color: #c7ced8;
+  top: calc(50% + 10px);
+  /* transform: translateY(25% ); */
+}
+
+.teaching-card {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  margin: 20px 0px 20px 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px 20px 20px 20px;
+}
+
+.teaching-logo {
+  flex: 0 0 60px;
+  margin-right: 20px;
+}
+
+.teaching-logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.teaching-details {
+  flex: 1;
+}
+
+.teaching-details h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.teaching-details .organization {
+  font-size: 1em;
+  color: #6b6b6b;
+  margin: 0;
+}
+
+.teaching-details .date-location {
+  font-size: 0.9em;
+  color: #9a9a9a;
+  margin: 5px 0 10px;
+}
+
+.teaching-details ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.teaching-details ul li {
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px; /* Space between icons */
+  justify-content: center; /* Center the icons */
+  margin-top: 15px;
+}
+
+.social-icons .icon {
+  width: 30px; /* Set the size of the icons */
+  height: 30px;
+  background-size: cover;
+  display: inline-block;
+}
+
+.icon.twitter {
+  background: url('path-to-twi-icon.png') no-repeat center center;
+}
+
+.icon.google-scholar {
+  background: url('path-to-google-scholar-icon.png') no-repeat center center;
+}
+
+.icon.github {
+  background: url('path-to-github-icon.png') no-repeat center center;
+}
+
+.icon.linkedin {
+  background: url('/img/Linkedin.png') no-repeat center center;
+}
+
+.icon.facebook {
+  background: url('path-to-facebook-icon.png') no-repeat center center;
+}
+
+.icon.instagram {
+  background: url('path-to-instagram-icon.png') no-repeat center center;
+}
+
+.icon.cv {
+  background: url('/img/cv.png') no-repeat center center;
+}
+
+.project-card {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+  padding: 20px 0px 60px 0px;
+  overflow: hidden;
+}
+
+.project-logo {
+  flex: 0 0 40%;
+  padding: 0px 20px;
+  align-content: center;
+}
+
+.project-logo img {
+  height: auto; /* Adjust size accordingly */
+  max-width: 100%;
+}
+
+.project-content {
+  padding: 0px 20px;
+  flex-grow: 1;
+  align-content: center;
+}
+
+.project-links button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.project-content a {
+  text-decoration: none;
+  color: black;
+}
+
+.project-content a:visited {
+  color: black;
+}
+
+.project-content a:hover {
+  text-decoration: underline;
+}
+
+.project-links button:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+#publications {
+  display: flex; /* Aligns child elements (left and right sections) horizontally */
+  background-color: white;
+  padding: 80px 100px 80px 50px;
+  align-items: flex-start; /* Aligns items at the start of the flex container */
+}
+
+#talks {
+  display: flex; /* Aligns child elements (left and right sections) horizontally */
+  background-color: white;
+  padding: 80px 100px 80px 50px;
+  align-items: flex-start; /* Aligns items at the start of the flex container */
+  background-color: #edededa3;
+}
+
+.left-section {
+  flex-basis: 30%; /* Takes up 30% of the flex container */
+  padding-right: 80px; /* Adds some space between the sections */
+}
+
+.right-section {
+  flex-grow: 1; /* Takes the remaining space in the flex container */
+}
+
+#publications li p {
+  display: inline;
+  margin: 0;
+  font-size: 18px;
+}
+
+#publications ul {
+  list-style: none;
+  padding: 0px;
+}
+
+#publications li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+#publications li:last-child {
+  border-bottom: none;
+}
+
+#publications .links {
+  padding-top: 10px;
+}
+
+#publications .links a {
+  text-decoration: none;
+  color: #007BFF;
+  margin-right: 10px;
+}
+
+#publications .links a:hover {
+  text-decoration: underline;
+}
+
+#publications .see-all {
+  display: block;
+  text-decoration: none;
+  color: #007BFF;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#publications .see-all:hover {
+  text-decoration: underline;
+}
+
+#publications h2, #talks h2 {
+  font-size: 1.8em;
+  text-align: left-align;
+  margin-bottom: 30px;
+}
+
+footer {
+  display: flex; /* Aligns child elements (left and right sections) horizontally */
+  padding: 10px 50px 10px 50px;
+  justify-content: space-between;
+  align-items: center; /* Aligns items at the start of the flex container */
+}
+
+.footer-section {
+  flex: 1; /* Allows each section to grow equally */
+  display: flex;
+  justify-content: center; /* Center the content of each section */
+  align-items: center;
+}
+
+.footer-section.left {
+  justify-content: flex-start; /* Centers the content */
+}
+
+.footer-section.right {
+  justify-content: flex-end; /* Align the content to the right */
+  visibility: hidden; /* Make the right spacer invisible */
+}
+
+#intro {
+  font-size: 1.2em;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+}
