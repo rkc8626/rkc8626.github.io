@@ -651,17 +651,18 @@ footer {
 }
 
 input:checked + .slider {
-  background-color: #303136;
+  background-color: #202A34;
 }
 
 input:checked + .slider:before {
   left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
-  background: #303136;
+  background: #202A34;
   /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
   box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
 
 /* Default styles (light mode) */
+/* General Light Mode Styles (default) */
 body.light-mode {
   background-color: white;
   color: black;
@@ -669,22 +670,76 @@ body.light-mode {
 
 header.light-mode {
   background-color: white;
+  color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for light mode */
 }
 
 nav a.light-mode {
   color: black;
 }
 
-/* Dark mode styles */
+nav a.light-mode:hover {
+  color: #1a73e8; /* Hover color */
+}
+
+/* General Dark Mode Styles */
 body.dark-mode {
-  background-color: #121212;
-  color: white;
+  background-color: #121212; /* Dark background for body */
+  color: #e0e0e0; /* Light text for readability */
 }
 
 header.dark-mode {
-  background-color: #1f1f1f;
+  background-color: #202A34; /* Dark header background */
+  color: #ffffff; /* Light header text */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Darker shadow for dark mode */
 }
 
 nav a.dark-mode {
+  color: #ffffff; /* Light text for links in dark mode */
+}
+
+nav a.dark-mode:hover {
+  color: #4a90e2; /* Lighter hover color for dark mode */
+}
+
+/* Adjusting the footer for both modes */
+footer.light-mode {
+  background-color: white;
+  color: black;
+}
+
+footer.dark-mode {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+/* Buttons and other elements adjustments */
+button.light-mode {
+  background-color: #f4f4f5;
+  color: 17202A;
+  border: 1px solid #ccc;
+}
+
+button.dark-mode {
+  background-color: #2B353D;
   color: white;
 }
+
+button.dark-mode:hover {
+  background-color: #17202A;
+}
+
+/* Links adjustment for publications and other sections */
+#publications .links a.light-mode {
+  color: #007BFF;
+}
+
+#publications .links a.dark-mode {
+  color: #4a90e2;
+}
+
+#publications .links a.light-mode:hover,
+#publications .links a.dark-mode:hover {
+  text-decoration: underline;
+}
+
