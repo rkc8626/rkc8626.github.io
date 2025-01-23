@@ -1,143 +1,444 @@
 <!DOCTYPE html>
-<html lang="en">
+ <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="styles.css">
-    <title>Ray Chen</title>
-  </head>
-
-  <body>
-
-    <div class="page-container"> <!-- Added a container div for the entire page content -->
-
-      <header>
+		<title>Ray Chen</title>
+		<!-- link to main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@900&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+	</head>
+	<body>
+    <header>
+      <section id="nav-bar">
+        <h1>Ray Chen</h1>
         <nav>
-          <ul>
-            Ray Chen
-            <li><a href="index.html">Home</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="research.html">Research & Projects</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li>
-              <label class="switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-              </label>
-            </li>
-          </ul>
+          <a href="#profile-section">Home</a>
+          <a href="#research">Research</a>
+          <a href="#project">Project</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#publications">Publications</a>
+          <!--<a href="/experience">Experience</a>-->
+          <!--<a href="/gallary">Gallary</a>-->
+          <!--<a href="/contact">Old Site</a>-->
+          <li>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </li>
         </nav>
-      </header>
+      </section>
+    </header>
 
-      <div class="content">
-        <div id="profile">
-          <img src="../asserts/img/raychen.jpg" alt="Your Picture">
-          <h2>Ray Chen</h2>
-          <p>Graduate Student @ UF</p>
-
-          <hr>
-          <!-- <p>
-            <i class="fas fa-graduation-cap" style="color: rgb(87, 48, 177);"></i>
-            Graduate Student @ UW
-          </p> -->
-          <p>
-            <i class="fas fa-map-marker-alt" style="color: rgb(185, 15, 15);"></i>
-            Gainesville, Florida
-          </p>
-          <p> <a href="mailto:chenz1@ufl.edu">
+    <section id="profile-section">
+      <div id="profile">
+        <div class="image-container">
+          <img src="asserts/img/newRay.jpg" alt="Ray Chen's profile picture" class="profile-image">
+        </div>
+        <div class="profile-info">
+          <h1 class="name">Ray Chen</h1>
+          <p class="email"><a href="mailto:chenz1@ufl.edu">
             <i class="fas fa-envelope" style="color: rgb(37, 35, 35);" ></i>
-            chenz1@ufl.edu
-          </a> </p>
-          <p> <a href="https://www.linkedin.com/in/rray-zchen1/">
+            chenz1@ufl.edu</a>
+          </p>
+          <p class="position">1st-year PhD Student at Computer Science</p>
+          <p class="university"><a href="https://www.cise.ufl.edu">
+            <i class="fas fa-map-marker-alt" style="color: rgb(185, 15, 15);"></i>
+            University of Florida
+          </p>
+          <p class="email"><a href="https://www.linkedin.com/in/rray-zchen1/">
             <i class="fab fa-linkedin" style="color: rgb(32, 93, 198);"></i>
-            Linkedin
-          </a> </p>
-          <!-- <p> <a href="https://github.com/rkc8626?tab=repositories">
-            <i class="fab fa-github" style="color: rgb(0, 0, 0);"></i>
-            GitHub
-          </a> </p> -->
+            Linkedin</a>
+          </p>
         </div>
-
-        <main>
-
-        <h1>
-          <i class="fas fa-user"></i>
-          About
-        </h1>
-
-        <p>
-          I am a Ph.D. student in Computer Science at the University of Florida, specializing in
-           interactive AI/ML and temporal-spatial data analysis. With a Master’s in Electrical
-           and Computer Engineering from the University of Washington and a Bachelor’s in Physics
-           and Astronomy from The Ohio State University, my expertise includes machine learning,
-           data visualization, big data, and human-centered AI. My research focuses on developing
-           intuitive systems for actionable insights from complex data. I seek opportunities to
-           collaborate on impactful interdisciplinary projects that address real-world challenges.
+      </div>
+      <div id="about">
+        <h1>About Me</h1>
+        <p id="intro">
+          I am a 1st-year Ph.D. student in Computer Science at the University of Florida, specializing
+          in Human centered computing, especaily in interactive AI/ML and temporal-spatial data analysis.
+           With a Master's in Electrical and Computer Engineering from the University of Washington
+           and a Bachelor's in Physics and Astronomy from The Ohio State University, my expertise
+           includes machine learning, data visualization, and human-centered AI. My research focuses
+           on developing intuitive systems for actionable insights from complex data. I seek opportunities
+           to collaborate on impactful interdisciplinary projects that address real-world challenges.
         </p>
-
-        <h1>
-          <i class="fas fa-book"></i>
-          Education
-        </h1>
-
-        <div class="school-divider">
-          <div class="school-symbol">
-              <img src="../asserts/symbol/uf.png" alt="UF Symbol">
+        <hr>
+        <div class="edu-interest">
+          <div class="column1">
+            <h3>Research Interests</h3>
+            <ul>
+              <li><span class="fa-solid fa-user-astronaut"></span>
+                <section class="details-container">
+                  <p class="course">Human-Centered Computing</p>
+                </section>
+              </li>
+              <li><span class="fa-solid fa-robot"></span>
+                <section class="details-container">
+                  <p class="course">Interactive AI/ML</p>
+                </section>
+              </li>
+              <li><span class="fa-solid fa-balance-scale"></span>
+                <section class="details-container">
+                  <p class="course">Fairness AI</p>
+                </section>
+              </li>
+              <li><span class="fa-solid fa-chart-line"></span>
+                <section class="details-container">
+                  <p class="course">Data Visualization</p>
+                </section>
+              </li>
+            </ul>
           </div>
-          <div class="school-degree">
-              <h2>University of Florida</h2>
-              <p>Ph.D Student in Computer Science</p>
+
+          <div class="column2">
+            <h3>Education</h3>
+            <ul>
+              <li>
+                <span class="fas fa-graduation-cap"></span>
+                <section class="details-container">
+                  <p class="course">Ph.D. in Computer Science (Expected graduation: 2028/05)</p>
+                  <p class="institution">University of Florida, Gainesville</p>
+                </section>
+              </li>
+              <li>
+                <span class="fas fa-graduation-cap"></span>
+                <section class="details-container">
+                  <p class="course">MS in Electrical and Computer Engineering</p>
+                  <p class="institution">University of Washington, Seattle</p>
+                </section>
+              </li>
+              <li>
+                <span class="fas fa-graduation-cap"></span>
+                <section class="details-container">
+                  <p class="course">BS in Physics and Astronomy</p>
+                  <p class="institution">The Ohio State Univeristy, Columbus</p>
+                </section>
+              </li>
+            </ul>
           </div>
-          <div class="date-loca">
-            <p>Aug 2024 - May 2029 (Expected)</p>
-            <p>Gainesville, Fl</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Academic Experience</h2>
+      <div class="timeline-container">
+
+        <div class="teaching-card card1">
+          <div class="teaching-logo">
+            <img src="asserts/symbol/uf.png" alt="University Logo">
+          </div>
+          <div class="teaching-details">
+            <h3>Graduate Research Assistant</h3>
+            <p class="organization">University of Florida</p>
+            <p class="date-location">Aug 2024 – Present · Gainesville, FL</p>
+            <ul>
+              <li>Leveraged interactive AI techniques to enhance model interpretability and improve detection accuracy.</li>
+              <li>Applied statistical and computational methods to analyze data trends, ensuring fairness and scalability of the developed solutions.</li>
+              <li>Contributed to the development of a framework for real-world applications in monitoring.</li>
+              <li>Advisor: <a href="https://ceg.me//">Christan Grant</a></li>
+            </ul>
+          </div>
+          <div class="circle"></div>
+          <div class="line"></div>
+        </div>
+
+        <!-- First teaching experience -->
+        <div class="teaching-card card2">
+          <div class="teaching-logo">
+            <img src="asserts/symbol/uw.png" alt="University Logo">
+          </div>
+          <div class="teaching-details">
+            <h3>Graduate Grader</h3>
+            <p class="organization">University of Washington</p>
+            <p class="date-location">Sep 2023 – Dec 2023 · Seattle, WA</p>
+            <ul>
+              <li>Served as a grader for EE 215, evaluating homework assignments with consistency and accuracy.</li>
+              <li>Designed detailed grading rubrics to ensure fairness and clarity in evaluation.</li>
+              <li>Provided guidance and support by addressing student questions regarding homework assignments.</li>
+              <li>Answer the questions regraing to the homework assignmebntrs</li>
+              <li>Served courses: EE 215: Fundamentals of Electrical Engineering.</li>
+            </ul>
+          </div>
+          <div class="line"></div>
+          <div class="circle"></div>
+          <div class="lineToo"></div>
+        </div>
+
+        <!-- Second teaching experience -->
+        <div class="teaching-card card2">
+          <div class="teaching-logo">
+            <img src="asserts/symbol/osu.png" alt="University Logo">
+          </div>
+          <div class="teaching-details">
+            <h3>Undergraduate Teaching Assistant</h3>
+            <p class="organization">The Ohio State University</p>
+            <p class="date-location">Jan 2022 – May 2022 · Columbus, OH</p>
+            <ul>
+              <li>Created and evaluated Python data analysis exercises for a class of 60 students, focusing on enhancing their data
+               analysis and visualization skills in astronomy.</li>
+			        <li>Attended assigned class and lab session to assist students in their development of basic skills in laboratories and lectures.</li>
+				      <li>Graded assignments, hold office hours, and conducted review sessions to help students prepare for exams.</li>
+              <li>Coordinated the class schedule and resolved academic misconduct conflicts. Developed rubrics for NumPy assignments
+                to ensure fair evaluation and grading consistency.</li>
+              <li>Served courses: Astronomy 1221: Astronomy Data Analysis and Visualization.</li>
+            </ul>
+          </div>
+          <div class="line"></div>
+          <div class="circle"></div>
+          <div class="lineToo"></div>
+        </div>
+
+        <div class="teaching-card card2">
+          <div class="teaching-logo">
+            <img src="asserts/symbol/osu.png" alt="University Logo">
+          </div>
+          <div class="teaching-details">
+            <h3>Undergraduate Research Assistant</h3>
+            <p class="organization">The Ohio State University</p>
+            <p class="date-location">June 2021 – May 2022 · Columbus, OH</p>
+            <ul>
+              <li>The project is about the Pulsar Timing Analysis</li>
+              <li>Collaborated with a team to investigate pulsar timing and its application in detecting anomalies in pulsation periods caused by orbiting bodies.</li>
+              <li>Derived and implemented mathematical expressions for changes in radio pulse arrival times using orbital mechanics and pulsar timing models.</li>
+              <li>Designed and developed a Python-based computational notebook allowing users to simulate artificial pulse timing data for pulsar systems.</li>
+              <li>Incorporated instructional elements, background reading links, and visualization tools for educational purposes.</li>
+              <li>Advsior: <a href="https://astronomy.osu.edu/people/terndrup.1">Donald Terndrup</a></li>
+            </ul>
+          </div>
+          <div class="circle"></div>
+          <div class="lineToo"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="project">
+      <h2>Selected Projects</h2>
+
+      <div class="project-card">
+        <div class="project-logo">
+          <img src="asserts/img/fai flow chart.png" alt="TBD">
+        </div>
+        <div class="project-content">
+          <h3><a href="/project/equityengine">[Ongoing] Fair AI interface</a></h3>
+          <p>Enable users to visualize the fairness of classifiers on video data in
+            real-time by simultaneously adjusting various parameters.</p>
+          <!--<div class="project-links">
+            <button onclick="location.href='URL_TO_SLIDES'">Slides</button>
+            <button onclick="location.href='URL_TO_GITHUB'">GitHub</button>
+          </div>-->
         </div>
       </div>
 
-        <div class="school-divider">
-          <div class="school-symbol">
-              <img src="../asserts/symbol/uw.png" alt="UW Symbol">
-          </div>
-          <div class="school-degree">
-              <h2>University of Washington</h2>
-              <p>Master of Science in Electrical and Computer Engineering</p>
-          </div>
-          <div class="date-loca">
-            <p>Sep 2022 - Jun 2024 (Expected)</p>
-            <p>Seattle, WA</p>
+      <div class="project-card">
+        <div class="project-logo">
+          <img src="asserts/img/settle.png" alt="TBD">
+        </div>
+        <div class="project-content">
+          <h3><a href="https://cse440.medium.com/new-in-town-683af59020ea">'SettleIn' mobile app: Alleviating the challenges faced by young adults relocating to new areas.</a></h3>
+          <p> We began with a thorough design research plan, conducted user research to understand needs, and
+            performed a detailed task analysis to refine key functionalities. Insights from user
+            research guided our initial sketches and storyboards, which were tested and iterated
+            through paper prototyping. We then transitioned to digital prototypes to validate the
+            user experience, culminating in a final presentation and poster showcasing the project's
+            evolution.</p>
+          <!--<div class="project-links">
+            <button onclick="location.href='URL_TO_SLIDES'">Slides</button>
+            <button onclick="location.href='URL_TO_GITHUB'">GitHub</button>
+          </div>-->
         </div>
       </div>
 
-        <div class="school-divider">
-          <div class="school-symbol">
-              <img src="../asserts/symbol/osu.png" alt="OSU Symbol">
-          </div>
-          <div class="school-degree">
-              <h2>The Ohio State Univeristy</h2>
-              <p>Bachelor of Science in Physics and Astronomy</p>
-          </div>
-          <div class="date-loca">
-            <p>Aug 2018 - May 2022</p>
-            <p>Columbus, OH</p>
+      <div class="project-card">
+        <div class="project-logo">
+          <img src="asserts/img/Health monitoring system based on wireless perception.png" alt="TBD">
+        </div>
+        <div class="project-content">
+          <h3>Health monitoring system based on wireless perception</a></h3>
+          <p>Developed non-contact wireless sensing technologies leveraging Wi-Fi and CSI analysis for behavior recognition and identity authentication.
+            Designed algorithms for motion detection, noise reduction, and physiological signal monitoring using advanced techniques like Hampel filtering and SVM modeling.
+            Contributed to a multi-signal sensing platform integrating UWB, Wi-Fi, and millimeter-wave signals for accurate indoor positioning and behavior monitoring.
+          </p>
+          <p><b>Resulted in Patent CN116313093A,</b> enabling applications in elderly fall detection, healthcare monitoring, and secure access systems.</p>
+          <!--<div class="project-links">
+            <button onclick="location.href='URL_TO_SLIDES'">Slides</button>
+            <button onclick="location.href='URL_TO_GITHUB'">GitHub</button>
+          </div>-->
         </div>
       </div>
 
-        <h1>
-          <i class="fas fa-key"></i>
-          Skills & Tools
-        </h1>
-
-
-        </main>
+      <div class="project-card">
+        <div class="project-logo">
+          <img src="asserts/img/eal-time Health Assessment and Early Warning Method Based on Perceptual Sampling Data.png" alt="TBD">
+        </div>
+        <div class="project-content">
+          <h3>Real-time Health Assessment and Early Warning Method Based on Perceptual Sampling Data</a></h3>
+          <p>Developed intelligent wearable devices and wireless sensing systems for behavior correction and rehabilitation therapy,
+            focusing on non-contact sensing, data transmission, and personalized health monitoring.
+            Integrated edge-cloud computing for real-time data analysis, enabling precise monitoring of vital signs and behavior.
+          </p>
+          <p><b>Resulted in Patent CN116386840A,</b> with applications in rehabilitation for cerebral palsy patients, elderly care, and personalized healthcare systems.</p>
+          <!--<div class="project-links">
+            <button onclick="location.href='URL_TO_SLIDES'">Slides</button>
+            <button onclick="location.href='URL_TO_GITHUB'">GitHub</button>
+          </div>-->
+        </div>
       </div>
 
-      <footer>
-        <p>&copy; 2023 Ray Chen</p>
-      </footer>
+      <div class="project-card">
+        <div class="project-logo">
+          <img src="asserts/img/aribus_dents.png" alt="TBD">
+        </div>
+        <div class="project-content">
+          <h3><a href="/project/equityengine"></a>Robotic Fuselage Inspection for Dents and Scratches sponsored by Airbus</h3>
+          <p>The Robotic Fuselage Inspection project, sponsored by Airbus Robotics, aimed to automate
+            and enhance the manual inspection of fuselage surfaces for defects like dents and scratches.
+            Using a Fanuc CRX-20iA/L robotic arm, Intel RealSense camera, and a trained Inception V3
+            model (98.5% accuracy), the team captured and classified defect images, integrating the
+            results into an AR application for precise defect visualization on 3D models. Simulated
+            in ROBOGUIDE, the robotic arm's optimized scanning path enabled efficient panel coverage,
+            while the AR app anchored and marked defect locations. This system significantly reduces
+            inspection time, improving accuracy and scalability for future advancements.
+         </p>
+          <!--<div class="project-links">
+            <button onclick="location.href='URL_TO_SLIDES'">Slides</button>
+            <button onclick="location.href='URL_TO_GITHUB'">GitHub</button>
+          </div>-->
+        </div>
+      </div>
 
-    </div> <!-- Closing the container div -->
+    </section>
 
-  </body>
-  <script src='index.js'></script>
+    <section id="teaching">
+      <h2>Industry Experience</h2>
+      <div class="timeline-container">
 
+        <div class="teaching-card card1">
+          <div class="teaching-logo">
+            <img src="asserts/symbol/airbus_robotics_logo.jpg" alt="Logo">
+          </div>
+          <div class="teaching-details">
+            <h3>Software Engineer Capstone Intern</h3>
+            <p class="organization">Airbus Robotics(MTM Robotics)</p>
+            <p class="date-location">Jan 2023 – Jun 2023 · Seattle, WA</p>
+            <ul>
+              <!-- <li>Need more</li> -->
+            </ul>
+          </div>
+          <div class="circle"></div>
+          <div class="line"></div>
+        </div>
+
+        <div class="teaching-card card2">
+          <div class="teaching-logo">
+            <img src="asserts/symbol/State Grid NARI Group Corporation.jpg" alt="Logo">
+          </div>
+          <div class="teaching-details">
+            <h3>Electrical Design Engineer Intern</h3>
+            <p class="organization">State Grid NARI Group Corporation</p>
+            <p class="date-location">May 2021 – Jul 2021 · Nanking, Jiangsu</p>
+            <ul>
+              <!-- <li>Need more</li> -->
+            </ul>
+          </div>
+          <div class="line"></div>
+          <div class="circle"></div>
+          <div class="lineToo"></div>
+        </div>
+
+        <div class="teaching-card card2">
+          <div class="teaching-logo">
+            <img src="asserts/symbol/NR Electric Co., Ltd .jpg" alt="Logo">
+          </div>
+          <div class="teaching-details">
+            <h3>Electrical Computer Engineer Intern</h3>
+            <p class="organization">NR Electric Co., Ltd</p>
+            <p class="date-location">May 2020 – Jul 2020 · Nanking, Jiangsu</p>
+            <ul>
+              <!-- <li>Need more</li> -->
+            </ul>
+          </div>
+          <div class="line"></div>
+          <div class="circle"></div>
+          <div class="lineToo"></div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="left-section">
+        <h2>Publications</h2>
+      </div>
+      <div class="right-section">
+        <ul>
+            <li>
+                <span>📄</span>
+                <p>Ray(Zeyao) Chen. <strong>Daylighting Performance of Sunlight Transmission and Concentration via Plastic Optical Fibers</strong></p>
+                <div class="links">
+                    <!-- <a>PDF (COMING SOON, available in Feb 2025)</a>
+                    <a>Cite (COMING SOON, available in Feb 2025)</a> -->
+                    <!--<a href="#">DOI</a>-->
+                </div>
+            </li>
+            <!-- Repeat similar blocks for other publications -->
+        </ul>
+        <!--<a href="#" class="see-all">SEE ALL PUBLICATIONS ></a>-->
+      </div>
+    </section>
+
+    <section id="service">
+      <div class="left-section">
+        <h2>External Service</h2>
+      </div>
+      <div class="right-section">
+        <ul>
+          <li>
+            <span>
+              <i class="fa-solid fa-note-sticky"></i>
+              2025 IEEE International Conference on Data Engineering (ICDE) — Reviewer
+            </span>
+          </li>
+          <li>
+            <span>
+              <i class="fa-solid fa-note-sticky"></i>
+              2024 International Conference on Machine Learning and Applications (ICMLA) — Reviewer
+            </span>
+          </li>
+          <li>
+            <span>
+              <i class="fa-solid fa-note-sticky"></i>
+              2024 IEEE International Conference on Big Data (IEEE BigData) — Reviewer
+            </span>
+          </li>
+        </ul>
+        <!-- <a href="#" class="see-all">SE ></a> Uncomment this line if you want a "See All" link -->
+      </div>
+    </section>
+
+    <section id="talks">
+      <div class="left-section">
+        <h2>Talks & Presentations</h2>
+      </div>
+      <div class="right-section">
+        <h2>COMING SOON</h2>
+      </div>
+    </section>
+
+		<footer>
+      <div class="footer-section left">
+        <p id="last-updated">Last Updated: 01/21/2025 </p>
+      </div>
+      <div class="footer-section center">
+        <p>
+          <!--Site created by Ray Chen. All other attributions cited in page source.-->
+          © Ray Chen. All Rights Reserved.
+        </p>
+      </div>
+      <div class="footer-section right"></div> <!-- Invisible spacer -->
+    </footer>
+	</body>
 </html>
