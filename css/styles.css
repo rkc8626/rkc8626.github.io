@@ -660,3 +660,31 @@ input:checked + .slider:before {
   /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
   box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
+
+/* Default styles (light mode) */
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+header.light-mode {
+  background-color: white;
+}
+
+nav a.light-mode {
+  color: black;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+header.dark-mode {
+  background-color: #1f1f1f;
+}
+
+nav a.dark-mode {
+  color: white;
+}
