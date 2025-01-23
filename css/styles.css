@@ -374,34 +374,6 @@ div#profile {
   display: inline-block;
 }
 
-.icon.twitter {
-  background: url('path-to-twi-icon.png') no-repeat center center;
-}
-
-.icon.google-scholar {
-  background: url('path-to-google-scholar-icon.png') no-repeat center center;
-}
-
-.icon.github {
-  background: url('path-to-github-icon.png') no-repeat center center;
-}
-
-.icon.linkedin {
-  background: url('/img/Linkedin.png') no-repeat center center;
-}
-
-.icon.facebook {
-  background: url('path-to-facebook-icon.png') no-repeat center center;
-}
-
-.icon.instagram {
-  background: url('path-to-instagram-icon.png') no-repeat center center;
-}
-
-.icon.cv {
-  background: url('/img/cv.png') no-repeat center center;
-}
-
 .project-card {
   display: flex;
   background-color: white;
