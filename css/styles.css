@@ -1287,3 +1287,115 @@ body.dark-mode ::-moz-selection {
   color: #f0f6fc;
 }
 
+/* Dark mode - fix inline styled icons */
+body.dark-mode .fa-map-marker-alt,
+body.dark-mode .fas.fa-map-marker-alt {
+  color: #ff6b6b !important;
+}
+
+body.dark-mode .fa-envelope,
+body.dark-mode .fas.fa-envelope {
+  color: #ffa94d !important;
+}
+
+body.dark-mode .fa-linkedin,
+body.dark-mode .fab.fa-linkedin {
+  color: #58a6ff !important;
+}
+
+body.dark-mode .fa-file,
+body.dark-mode .fas.fa-file {
+  color: #8b949e !important;
+}
+
+/* Dark mode - ensure all paragraphs and text are visible */
+body.dark-mode p {
+  color: #c9d1d9;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #f0f6fc;
+}
+
+body.dark-mode a {
+  color: #58a6ff;
+}
+
+body.dark-mode li {
+  color: #c9d1d9;
+}
+
+body.dark-mode span {
+  color: #c9d1d9;
+}
+
+body.dark-mode strong,
+body.dark-mode b {
+  color: #f0f6fc;
+}
+
+/* Override any remaining black text */
+body.dark-mode .profile-info {
+  color: #e6edf3;
+}
+
+body.dark-mode .details-container {
+  color: #c9d1d9;
+}
+
+body.dark-mode .details-container p {
+  color: #c9d1d9;
+}
+
+/* Make sure all sections have proper text color */
+body.dark-mode section {
+  color: #e6edf3;
+}
+
+body.dark-mode div {
+  color: inherit;
+}
+
+/* Catch-all for any remaining text that might be black */
+body.dark-mode * {
+  border-color: rgba(88, 166, 255, 0.2);
+}
+
+body.dark-mode *:not(a):not(.name):not(h1):not(h2):not(h3) {
+  text-shadow: none;
+}
+
+/* Tables if any */
+body.dark-mode table,
+body.dark-mode td,
+body.dark-mode th {
+  color: #c9d1d9;
+  border-color: rgba(88, 166, 255, 0.2);
+}
+
+/* Labels and form elements */
+body.dark-mode label {
+  color: #c9d1d9;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: #21262d;
+  color: #e6edf3;
+  border-color: rgba(88, 166, 255, 0.2);
+}
+
+/* Code blocks if any */
+body.dark-mode code,
+body.dark-mode pre {
+  background-color: #1c2128;
+  color: #79c0ff;
+  border: 1px solid rgba(88, 166, 255, 0.2);
+}
+
