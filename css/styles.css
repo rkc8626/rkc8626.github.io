@@ -3,6 +3,7 @@ body {
   font-family: "Helvetica", sans-serif;
   margin: 0px;
   scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html {
@@ -34,6 +35,7 @@ header {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Adds shadow for better visibility */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #nav-bar {
@@ -234,6 +236,7 @@ div#profile {
   padding: 80px 30px 80px 50px;
   gap: 35px;
   background-color: #edededa3;
+  transition: background-color 0.3s ease;
 }
 
 #project {
@@ -242,6 +245,7 @@ div#profile {
   justify-content: center;
   padding: 80px 30px 80px 50px;
   gap: 35px;
+  transition: background-color 0.3s ease;
 }
 
 .email, .position, .university {
@@ -314,6 +318,7 @@ div#profile {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 20px 20px 20px 20px;
+  transition: all 0.3s ease;
 }
 
 .teaching-logo {
@@ -381,6 +386,7 @@ div#profile {
   /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
   padding: 20px 0px 60px 0px;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .project-logo {
@@ -432,6 +438,7 @@ div#profile {
   background-color: white;
   padding: 80px 100px 80px 50px;
   align-items: flex-start; /* Aligns items at the start of the flex container */
+  transition: background-color 0.3s ease;
 }
 
 #service{
@@ -439,6 +446,7 @@ div#profile {
   background-color: #edededa3;
   padding: 80px 100px 80px 50px;
   align-items: flex-start; /* Aligns items at the start of the flex container */
+  transition: background-color 0.3s ease;
 }
 
 #talks {
@@ -446,6 +454,7 @@ div#profile {
   padding: 80px 100px 80px 50px;
   align-items: flex-start; /* Aligns items at the start of the flex container */
   background-color: white;
+  transition: background-color 0.3s ease;
 }
 
 .left-section {
@@ -573,6 +582,7 @@ footer {
   padding: 10px 50px 10px 50px;
   justify-content: space-between;
   align-items: center; /* Aligns items at the start of the flex container */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .footer-section {
@@ -684,22 +694,24 @@ nav a.light-mode:hover {
 
 /* General Dark Mode Styles */
 body.dark-mode {
-  background-color: #121212; /* Dark background for body */
-  color: #e0e0e0; /* Light text for readability */
+  background-color: #0f1419; /* Richer dark background */
+  color: #e6edf3; /* Softer light text for better readability */
 }
 
 header.dark-mode {
-  background-color: #202A34; /* Dark header background */
-  color: #ffffff; /* Light header text */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Darker shadow for dark mode */
+  background-color: #161b22; /* Slightly lighter than body for depth */
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid #30363d; /* Subtle border for definition */
 }
 
 nav a.dark-mode {
-  color: #ffffff; /* Light text for links in dark mode */
+  color: #c9d1d9;
+  transition: color 0.3s ease;
 }
 
 nav a.dark-mode:hover {
-  color: #4a90e2; /* Lighter hover color for dark mode */
+  color: #58a6ff; /* Brighter, more vibrant blue */
 }
 
 /* Adjusting the footer for both modes */
@@ -709,8 +721,9 @@ footer.light-mode {
 }
 
 footer.dark-mode {
-  background-color: #1f1f1f;
-  color: #e0e0e0;
+  background-color: #161b22;
+  color: #e6edf3;
+  border-top: 1px solid #30363d;
 }
 
 /* Buttons and other elements adjustments */
@@ -721,12 +734,16 @@ button.light-mode {
 }
 
 button.dark-mode {
-  background-color: #2B353D;
-  color: white;
+  background-color: #21262d;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  transition: all 0.2s ease;
 }
 
 button.dark-mode:hover {
-  background-color: #17202A;
+  background-color: #30363d;
+  border-color: #58a6ff;
+  color: #ffffff;
 }
 
 /* Links adjustment for publications and other sections */
@@ -735,7 +752,7 @@ button.dark-mode:hover {
 }
 
 #publications .links a.dark-mode {
-  color: #4a90e2;
+  color: #58a6ff;
 }
 
 #publications .links a.light-mode:hover,
@@ -746,117 +763,175 @@ button.dark-mode:hover {
 /* Dark mode for sections */
 body.dark-mode #research,
 body.dark-mode #teaching {
-  background-color: #1a1a1a;
+  background-color: #161b22;
 }
 
 body.dark-mode #project {
-  background-color: #121212;
+  background-color: #0f1419;
 }
 
 body.dark-mode #publications {
-  background-color: #121212;
+  background-color: #0f1419;
 }
 
 body.dark-mode #service {
-  background-color: #1a1a1a;
+  background-color: #161b22;
 }
 
 body.dark-mode #talks {
-  background-color: #121212;
+  background-color: #0f1419;
 }
 
 /* Dark mode for cards */
 body.dark-mode .teaching-card {
-  background-color: #1e1e1e;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: #1c2128;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4);
+  border: 1px solid #30363d;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.dark-mode .teaching-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+  border-color: #58a6ff;
 }
 
 body.dark-mode .project-card {
-  background-color: #1e1e1e;
+  background-color: #1c2128;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+body.dark-mode .project-card:hover {
+  transform: translateY(-2px);
 }
 
 body.dark-mode .teaching-details h3,
 body.dark-mode .project-content h3 {
-  color: #ffffff;
+  color: #f0f6fc;
 }
 
 body.dark-mode .teaching-details .organization {
-  color: #b0b0b0;
+  color: #8b949e;
 }
 
 body.dark-mode .teaching-details .date-location {
-  color: #888888;
+  color: #6e7681;
 }
 
 body.dark-mode .teaching-details ul li {
-  color: #d0d0d0;
+  color: #c9d1d9;
 }
 
 /* Dark mode for timeline elements */
 body.dark-mode .card1 .circle {
-  background-color: #4a90e2;
+  background-color: #58a6ff;
+  box-shadow: 0 0 8px rgba(88, 166, 255, 0.4);
 }
 
 body.dark-mode .card2 .circle,
 body.dark-mode .card3 .circle {
-  outline: 1px solid #555555;
+  outline: 2px solid #30363d;
+  background-color: #0f1419;
 }
 
 body.dark-mode .card2 .lineToo,
 body.dark-mode .card3 .lineToo,
 body.dark-mode .card1 .line,
 body.dark-mode .card2 .line {
-  background-color: #555555;
+  background-color: #30363d;
 }
 
 /* Dark mode for links in cards */
 body.dark-mode .teaching-card a {
-  color: #4a90e2;
+  color: #58a6ff;
+  transition: color 0.2s ease;
+}
+
+body.dark-mode .teaching-card a:hover {
+  color: #79c0ff;
+  text-decoration: underline;
 }
 
 body.dark-mode .teaching-card a:visited {
-  color: #4a90e2;
+  color: #58a6ff;
 }
 
 body.dark-mode .project-content a {
-  color: #e0e0e0;
+  color: #f0f6fc;
+  transition: color 0.2s ease;
+}
+
+body.dark-mode .project-content a:hover {
+  color: #58a6ff;
 }
 
 body.dark-mode .project-content a:visited {
-  color: #e0e0e0;
+  color: #f0f6fc;
 }
 
 /* Dark mode for publications section */
 body.dark-mode #publications li {
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid #30363d;
+  padding: 15px 0;
 }
 
 body.dark-mode #publications li p {
-  color: #e0e0e0;
+  color: #e6edf3;
+}
+
+body.dark-mode #publications li p strong {
+  color: #f0f6fc;
 }
 
 body.dark-mode #publications .links a {
-  color: #4a90e2;
+  color: #58a6ff;
+  transition: color 0.2s ease;
+}
+
+body.dark-mode #publications .links a:hover {
+  color: #79c0ff;
 }
 
 /* Dark mode for service section */
 body.dark-mode #service li {
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid #30363d;
+  padding: 15px 0;
 }
 
 body.dark-mode #service li span {
-  color: #e0e0e0;
+  color: #e6edf3;
+}
+
+body.dark-mode #service .fa-note-sticky {
+  color: #58a6ff;
 }
 
 /* Dark mode for profile section */
 body.dark-mode .name {
-  color: #ffffff;
+  color: #f0f6fc;
+  text-shadow: 0 0 20px rgba(88, 166, 255, 0.1);
 }
 
-body.dark-mode .position,
+body.dark-mode .position {
+  color: #8b949e;
+}
+
 body.dark-mode .university,
 body.dark-mode .email {
-  color: #4a90e2;
+  color: #58a6ff;
+}
+
+body.dark-mode .university a,
+body.dark-mode .email a {
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+body.dark-mode .university a:hover,
+body.dark-mode .email a:hover {
+  color: #79c0ff;
 }
 
 body.dark-mode #about h1,
@@ -866,32 +941,58 @@ body.dark-mode #project h2,
 body.dark-mode #publications h2,
 body.dark-mode #service h2,
 body.dark-mode #talks h2 {
-  color: #ffffff;
+  color: #f0f6fc;
 }
 
 body.dark-mode #intro {
-  color: #d0d0d0;
+  color: #c9d1d9;
+  line-height: 1.6;
 }
 
 body.dark-mode .edu-interest h3 {
-  color: #ffffff;
+  color: #f0f6fc;
 }
 
 body.dark-mode .course {
-  color: #d0d0d0;
+  color: #c9d1d9;
 }
 
 body.dark-mode .institution {
-  color: #b0b0b0;
+  color: #8b949e;
+}
+
+/* Dark mode for profile icons */
+body.dark-mode .fa-solid.fa-robot,
+body.dark-mode .fas.fa-graduation-cap,
+body.dark-mode .fa-solid.fa-user-astronaut,
+body.dark-mode .fa-solid.fa-balance-scale,
+body.dark-mode .fa-solid.fa-chart-line {
+  color: #58a6ff;
 }
 
 /* Dark mode for project links buttons */
 body.dark-mode .project-links button {
-  background-color: #2B353D;
+  background-color: #238636;
   color: #ffffff;
+  border: 1px solid #2ea043;
+  transition: all 0.2s ease;
 }
 
 body.dark-mode .project-links button:hover {
-  background-color: #4a90e2;
+  background-color: #2ea043;
+  box-shadow: 0 0 10px rgba(46, 160, 67, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Dark mode for hr element */
+body.dark-mode hr {
+  border-color: #30363d;
+  opacity: 1;
+}
+
+/* Dark mode for profile image border */
+body.dark-mode .profile-image {
+  border: 3px solid #30363d;
+  box-shadow: 0 0 20px rgba(88, 166, 255, 0.1);
 }
 

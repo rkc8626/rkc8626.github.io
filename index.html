@@ -459,32 +459,28 @@ const themeElements = [
   document.querySelector('footer')
 ];
 
-// Check for saved theme preference
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
+// Function to apply theme
+function applyTheme(theme) {
   themeElements.forEach(element => {
-    if (element) element.classList.add(savedTheme);
+    if (element) {
+      element.classList.remove('dark-mode', 'light-mode');
+      element.classList.add(theme);
+    }
   });
-  themeToggle.checked = savedTheme === 'dark-mode';
 }
+
+// Check for saved theme preference, default to light-mode
+const savedTheme = localStorage.getItem('theme') || 'light-mode';
+applyTheme(savedTheme);
+themeToggle.checked = savedTheme === 'dark-mode';
 
 // Toggle dark/light mode
 themeToggle.addEventListener('change', () => {
   if (themeToggle.checked) {
-    themeElements.forEach(element => {
-      if (element) {
-        element.classList.add('dark-mode');
-        element.classList.remove('light-mode');
-      }
-    });
+    applyTheme('dark-mode');
     localStorage.setItem('theme', 'dark-mode');
   } else {
-    themeElements.forEach(element => {
-      if (element) {
-        element.classList.add('light-mode');
-        element.classList.remove('dark-mode');
-      }
-    });
+    applyTheme('light-mode');
     localStorage.setItem('theme', 'light-mode');
   }
 });
