@@ -743,3 +743,155 @@ button.dark-mode:hover {
   text-decoration: underline;
 }
 
+/* Dark mode for sections */
+body.dark-mode #research,
+body.dark-mode #teaching {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode #project {
+  background-color: #121212;
+}
+
+body.dark-mode #publications {
+  background-color: #121212;
+}
+
+body.dark-mode #service {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode #talks {
+  background-color: #121212;
+}
+
+/* Dark mode for cards */
+body.dark-mode .teaching-card {
+  background-color: #1e1e1e;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .project-card {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .teaching-details h3,
+body.dark-mode .project-content h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .teaching-details .organization {
+  color: #b0b0b0;
+}
+
+body.dark-mode .teaching-details .date-location {
+  color: #888888;
+}
+
+body.dark-mode .teaching-details ul li {
+  color: #d0d0d0;
+}
+
+/* Dark mode for timeline elements */
+body.dark-mode .card1 .circle {
+  background-color: #4a90e2;
+}
+
+body.dark-mode .card2 .circle,
+body.dark-mode .card3 .circle {
+  outline: 1px solid #555555;
+}
+
+body.dark-mode .card2 .lineToo,
+body.dark-mode .card3 .lineToo,
+body.dark-mode .card1 .line,
+body.dark-mode .card2 .line {
+  background-color: #555555;
+}
+
+/* Dark mode for links in cards */
+body.dark-mode .teaching-card a {
+  color: #4a90e2;
+}
+
+body.dark-mode .teaching-card a:visited {
+  color: #4a90e2;
+}
+
+body.dark-mode .project-content a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .project-content a:visited {
+  color: #e0e0e0;
+}
+
+/* Dark mode for publications section */
+body.dark-mode #publications li {
+  border-bottom: 1px solid #333333;
+}
+
+body.dark-mode #publications li p {
+  color: #e0e0e0;
+}
+
+body.dark-mode #publications .links a {
+  color: #4a90e2;
+}
+
+/* Dark mode for service section */
+body.dark-mode #service li {
+  border-bottom: 1px solid #333333;
+}
+
+body.dark-mode #service li span {
+  color: #e0e0e0;
+}
+
+/* Dark mode for profile section */
+body.dark-mode .name {
+  color: #ffffff;
+}
+
+body.dark-mode .position,
+body.dark-mode .university,
+body.dark-mode .email {
+  color: #4a90e2;
+}
+
+body.dark-mode #about h1,
+body.dark-mode #teaching h2,
+body.dark-mode #research h2,
+body.dark-mode #project h2,
+body.dark-mode #publications h2,
+body.dark-mode #service h2,
+body.dark-mode #talks h2 {
+  color: #ffffff;
+}
+
+body.dark-mode #intro {
+  color: #d0d0d0;
+}
+
+body.dark-mode .edu-interest h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .course {
+  color: #d0d0d0;
+}
+
+body.dark-mode .institution {
+  color: #b0b0b0;
+}
+
+/* Dark mode for project links buttons */
+body.dark-mode .project-links button {
+  background-color: #2B353D;
+  color: #ffffff;
+}
+
+body.dark-mode .project-links button:hover {
+  background-color: #4a90e2;
+}
+
