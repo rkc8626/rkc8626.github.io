@@ -518,8 +518,8 @@ function applyTheme(theme) {
   });
 }
 
-// Check for saved theme preference, default to light-mode
-const savedTheme = localStorage.getItem('theme') || 'light-mode';
+// Check for saved theme preference, default to dark-mode
+const savedTheme = localStorage.getItem('theme') || 'dark-mode';
 applyTheme(savedTheme);
 themeToggle.checked = savedTheme === 'dark-mode';
 

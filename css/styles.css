@@ -897,13 +897,38 @@ body.dark-mode .project-card:hover {
   border-color: rgba(88, 166, 255, 0.3);
 }
 
+/* Card h3 with gradient text */
 body.dark-mode .teaching-details h3,
+body.dark-mode #project h3,
 body.dark-mode .project-content h3 {
+  color: #f0f6fc !important;
   background: linear-gradient(135deg, #f0f6fc 0%, #79c0ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 600;
+}
+
+/* h3 links */
+body.dark-mode h3 a {
+  background: linear-gradient(135deg, #f0f6fc 0%, #79c0ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+}
+
+body.dark-mode h3 a:hover {
+  background: linear-gradient(135deg, #79c0ff 0%, #58a6ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Browser fallback */
+@supports not (-webkit-background-clip: text) {
+  body.dark-mode .project-content h3,
+  body.dark-mode h3 a { color: #f0f6fc !important; }
 }
 
 body.dark-mode .teaching-details .organization {
@@ -1025,8 +1050,9 @@ body.dark-mode .project-content a:visited {
   color: #f0f6fc;
 }
 
-/* Dark mode for publications section */
-body.dark-mode #publications li {
+/* Publications and service list items */
+body.dark-mode #publications li,
+body.dark-mode #service li {
   border-bottom: 1px solid rgba(88, 166, 255, 0.1);
   padding: 20px;
   margin: 10px 0;
@@ -1036,15 +1062,12 @@ body.dark-mode #publications li {
   transition: all 0.3s ease;
 }
 
-body.dark-mode #publications li:hover {
+body.dark-mode #publications li:hover,
+body.dark-mode #service li:hover {
   border-left-color: #58a6ff;
   background: linear-gradient(135deg, rgba(28, 33, 40, 0.5) 0%, rgba(22, 27, 34, 0.7) 100%);
   box-shadow: 0 4px 12px rgba(88, 166, 255, 0.1);
   transform: translateX(5px);
-}
-
-body.dark-mode #publications li p {
-  color: #e6edf3;
 }
 
 body.dark-mode #publications li p strong {
@@ -1081,36 +1104,6 @@ body.dark-mode #publications .links a:hover::after {
   width: 100%;
 }
 
-/* Dark mode for service section */
-body.dark-mode #service li {
-  border-bottom: 1px solid rgba(88, 166, 255, 0.1);
-  padding: 20px;
-  margin: 10px 0;
-  background: linear-gradient(135deg, rgba(28, 33, 40, 0.3) 0%, rgba(22, 27, 34, 0.5) 100%);
-  border-radius: 8px;
-  border-left: 3px solid rgba(88, 166, 255, 0.3);
-  transition: all 0.3s ease;
-}
-
-body.dark-mode #service li:hover {
-  border-left-color: #58a6ff;
-  background: linear-gradient(135deg, rgba(28, 33, 40, 0.5) 0%, rgba(22, 27, 34, 0.7) 100%);
-  box-shadow: 0 4px 12px rgba(88, 166, 255, 0.1);
-  transform: translateX(5px);
-}
-
-body.dark-mode #service li span {
-  color: #e6edf3;
-}
-
-body.dark-mode #service .fa-note-sticky {
-  background: linear-gradient(135deg, #58a6ff 0%, #79c0ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 0 4px rgba(88, 166, 255, 0.3));
-}
-
 /* Dark mode for profile section */
 body.dark-mode .name {
   background: linear-gradient(135deg, #f0f6fc 0%, #79c0ff 50%, #58a6ff 100%);
@@ -1145,6 +1138,7 @@ body.dark-mode .email a:hover {
   text-shadow: 0 0 8px rgba(121, 192, 255, 0.5);
 }
 
+/* Section headings with gradient and underline accent */
 body.dark-mode #about h1,
 body.dark-mode #teaching h2,
 body.dark-mode #research h2,
@@ -1198,12 +1192,13 @@ body.dark-mode .institution {
   font-style: italic;
 }
 
-/* Dark mode for profile icons */
+/* Profile and service icons with gradient */
 body.dark-mode .fa-solid.fa-robot,
 body.dark-mode .fas.fa-graduation-cap,
 body.dark-mode .fa-solid.fa-user-astronaut,
 body.dark-mode .fa-solid.fa-balance-scale,
-body.dark-mode .fa-solid.fa-chart-line {
+body.dark-mode .fa-solid.fa-chart-line,
+body.dark-mode #service .fa-note-sticky {
   background: linear-gradient(135deg, #58a6ff 0%, #79c0ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1287,102 +1282,36 @@ body.dark-mode ::-moz-selection {
   color: #f0f6fc;
 }
 
-/* Dark mode - fix inline styled icons */
-body.dark-mode .fa-map-marker-alt,
-body.dark-mode .fas.fa-map-marker-alt {
-  color: #ff6b6b !important;
-}
-
-body.dark-mode .fa-envelope,
-body.dark-mode .fas.fa-envelope {
-  color: #ffa94d !important;
-}
-
-body.dark-mode .fa-linkedin,
-body.dark-mode .fab.fa-linkedin {
-  color: #58a6ff !important;
-}
-
-body.dark-mode .fa-file,
-body.dark-mode .fas.fa-file {
-  color: #8b949e !important;
-}
-
-/* Dark mode - ensure all paragraphs and text are visible */
-body.dark-mode p {
-  color: #c9d1d9;
-}
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5,
-body.dark-mode h6 {
-  color: #f0f6fc;
-}
-
-body.dark-mode a {
-  color: #58a6ff;
-}
-
-body.dark-mode li {
-  color: #c9d1d9;
-}
-
-body.dark-mode span {
-  color: #c9d1d9;
-}
-
-body.dark-mode strong,
-body.dark-mode b {
-  color: #f0f6fc;
-}
-
-/* Override any remaining black text */
-body.dark-mode .profile-info {
-  color: #e6edf3;
-}
-
-body.dark-mode .details-container {
-  color: #c9d1d9;
-}
-
-body.dark-mode .details-container p {
-  color: #c9d1d9;
-}
-
-/* Make sure all sections have proper text color */
-body.dark-mode section {
-  color: #e6edf3;
-}
-
-body.dark-mode div {
-  color: inherit;
-}
-
-/* Catch-all for any remaining text that might be black */
-body.dark-mode * {
-  border-color: rgba(88, 166, 255, 0.2);
-}
-
-body.dark-mode *:not(a):not(.name):not(h1):not(h2):not(h3) {
-  text-shadow: none;
-}
-
-/* Tables if any */
+/* Dark mode - universal text and element visibility */
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode span,
+body.dark-mode .details-container,
+body.dark-mode section,
+body.dark-mode label,
 body.dark-mode table,
 body.dark-mode td,
-body.dark-mode th {
-  color: #c9d1d9;
-  border-color: rgba(88, 166, 255, 0.2);
-}
+body.dark-mode th { color: #c9d1d9; }
 
-/* Labels and form elements */
-body.dark-mode label {
-  color: #c9d1d9;
-}
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3,
+body.dark-mode h4, body.dark-mode h5, body.dark-mode h6,
+body.dark-mode strong, body.dark-mode b { color: #f0f6fc !important; }
 
+body.dark-mode a { color: #58a6ff; }
+body.dark-mode div { color: inherit; }
+body.dark-mode * { border-color: rgba(88, 166, 255, 0.2); }
+
+/* Inline styled icons override */
+body.dark-mode .fa-map-marker-alt,
+body.dark-mode .fas.fa-map-marker-alt { color: #ff6b6b !important; }
+body.dark-mode .fa-envelope,
+body.dark-mode .fas.fa-envelope { color: #ffa94d !important; }
+body.dark-mode .fa-linkedin,
+body.dark-mode .fab.fa-linkedin { color: #58a6ff !important; }
+body.dark-mode .fa-file,
+body.dark-mode .fas.fa-file { color: #8b949e !important; }
+
+/* Form elements */
 body.dark-mode input,
 body.dark-mode textarea,
 body.dark-mode select {
@@ -1391,7 +1320,7 @@ body.dark-mode select {
   border-color: rgba(88, 166, 255, 0.2);
 }
 
-/* Code blocks if any */
+/* Code blocks */
 body.dark-mode code,
 body.dark-mode pre {
   background-color: #1c2128;
