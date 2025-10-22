@@ -2,54 +2,104 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="styles.css">
-    <script src='index.js'></script>
-    <title>RC Resume</title>
+    <title>Ray Chen - Resume</title>
+    <!-- link to main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@900&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
   </head>
 
   <body>
-
     <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li>
-            <label class="switch">
-              <input type="checkbox">
-              <span class="slider"></span>
-            </label>
-          </li>
-        </ul>
-      </nav>
+      <section id="nav-bar">
+        <h1>Ray Chen</h1>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="resume.html">Resume</a>
+        </nav>
+        <!-- Add the theme toggle switch -->
+        <label class="switch">
+          <input id="theme-toggle" type="checkbox">
+          <span class="slider"></span>
+        </label>
+      </section>
     </header>
 
+    <section id="resume-section">
+      <div class="resume-container">
+        <h2>
+          <i class="fas fa-file-pdf"></i>
+          Curriculum Vitae
+        </h2>
+        <p class="resume-description">View or download my complete CV below</p>
 
-
-    <div class="content">
-
-      <main>
-        <h1>
-          <i class="fas fa-file"></i>
-          Resume
-        </h1>
-
-
-        <div class="resume">
-
-          <iframe src="../asserts/doc/Ray_Chen_Curriculum_Vitae.pdf" width="100%" height="600px">
+        <div class="resume-buttons">
+          <a href="asserts/doc/Ray_Chen_Curriculum_Vitae.pdf" target="_blank" class="resume-btn">
+            <i class="fas fa-external-link-alt"></i> Open in New Tab
+          </a>
+          <a href="asserts/doc/Ray_Chen_Curriculum_Vitae.pdf" download class="resume-btn download-btn">
+            <i class="fas fa-download"></i> Download PDF
+          </a>
         </div>
 
-      </main>
-    </div>
+        <div class="resume-viewer">
+          <iframe src="asserts/doc/Ray_Chen_Curriculum_Vitae.pdf" width="100%" height="800px">
+            Your browser does not support PDFs. Please download the PDF to view it:
+            <a href="asserts/doc/Ray_Chen_Curriculum_Vitae.pdf">Download PDF</a>
+          </iframe>
+        </div>
+      </div>
+    </section>
 
+    <footer>
+      <div class="footer-section left">
+        <p id="last-updated">Last Updated: 01/21/2025</p>
+      </div>
+      <div class="footer-section center">
+        <p>© Ray Chen. All Rights Reserved.</p>
+      </div>
+      <div class="footer-section right"></div>
+    </footer>
 
+    <!-- Add JavaScript for theme toggle -->
+    <script>
+const themeToggle = document.getElementById('theme-toggle');
 
-  <footer>
-    <p>&copy; 2023 Ray Chen</p>
-  </footer>
+// Get all elements that need theme toggling
+const themeElements = [
+  document.body,
+  document.querySelector('header'),
+  document.querySelector('nav'),
+  document.querySelector('footer')
+];
 
+// Function to apply theme
+function applyTheme(theme) {
+  themeElements.forEach(element => {
+    if (element) {
+      element.classList.remove('dark-mode', 'light-mode');
+      element.classList.add(theme);
+    }
+  });
+}
+
+// Check for saved theme preference, default to dark-mode
+const savedTheme = localStorage.getItem('theme') || 'dark-mode';
+applyTheme(savedTheme);
+themeToggle.checked = savedTheme === 'dark-mode';
+
+// Toggle dark/light mode
+themeToggle.addEventListener('change', () => {
+  if (themeToggle.checked) {
+    applyTheme('dark-mode');
+    localStorage.setItem('theme', 'dark-mode');
+  } else {
+    applyTheme('light-mode');
+    localStorage.setItem('theme', 'light-mode');
+  }
+});
+    </script>
   </body>
 </html>
 
