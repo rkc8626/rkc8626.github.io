@@ -511,7 +511,7 @@ div#profile {
 
 #publications .links a {
   text-decoration: none;
-  color: #007BFF;
+  color: inherit;
   margin-right: 10px;
 }
 
@@ -797,11 +797,11 @@ button.dark-mode:hover {
 
 /* Links adjustment for publications and other sections */
 #publications .links a.light-mode {
-  color: #007BFF;
+  color: inherit;
 }
 
 #publications .links a.dark-mode {
-  color: #58a6ff;
+  color: inherit;
 }
 
 #publications .links a.light-mode:hover,
@@ -1078,30 +1078,8 @@ body.dark-mode #publications li p strong {
 }
 
 body.dark-mode #publications .links a {
-  color: #58a6ff;
+  color: inherit;
   text-decoration: none;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-body.dark-mode #publications .links a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: #79c0ff;
-  transition: width 0.3s ease;
-}
-
-body.dark-mode #publications .links a:hover {
-  color: #79c0ff;
-  text-shadow: 0 0 8px rgba(121, 192, 255, 0.4);
-}
-
-body.dark-mode #publications .links a:hover::after {
-  width: 100%;
 }
 
 /* Dark mode for profile section */
