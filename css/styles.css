@@ -515,6 +515,15 @@ div#profile {
   margin-right: 10px;
 }
 
+#publications .pub-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+#publications .pub-title-link:hover {
+  text-decoration: underline;
+}
+
 #publications .links a:hover {
   text-decoration: underline;
 }
