@@ -625,18 +625,8 @@ footer {
 }
 
 .footer-section.right {
-  justify-content: flex-end;
-  visibility: visible;
-}
-
-#visitor-info {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35em;
-}
-
-#visitor-flag {
-  font-style: normal;
+  justify-content: flex-end; /* Align the content to the right */
+  visibility: hidden; /* Make the right spacer invisible */
 }
 
 #intro {

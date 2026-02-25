@@ -505,12 +505,11 @@
         </p>
       </div>
       <div class="footer-section right">
-        <p id="visitor-info">
-          <span id="visitor-count">—</span> visitors
-          <span id="visitor-flag" aria-hidden="true"></span>
-        </p>
-      </div>
-    </footer>
+        <!-- FlagCounter: get your embed code from https://s02.flagcounter.com/ then paste below -->
+        <a href="https://info.flagcounter.com/UTuo"><img src="https://s05.flagcounter.com/map/UTuo/size_s/txt_000000/border_CCCCCC/pageviews_1/viewers_Hi+from/flags_0/" alt="Flag Counter" border="0"></a>      </div> <!-- Invisible spacer -->
+        <!-- Code for forums: https://forums.s02.flagcounter.com/ -->
+        <!-- [URL=https://info.flagcounter.com/UTuo][IMG]https://s05.flagcounter.com/map/UTuo/size_s/txt_000000/border_CCCCCC/pageviews_1/viewers_Hi+from/flags_0/[/IMG][/URL] -->
+      </footer>
 
 
       <!-- Add JavaScript -->
@@ -550,58 +549,6 @@ themeToggle.addEventListener('change', () => {
     localStorage.setItem('theme', 'light-mode');
   }
 });
-
-// --- Visitor count and country flag (by IP) ---
-(function () {
-  const COUNT_NAMESPACE = 'rkc8626.github.io';
-  const COUNT_KEY = 'visits';
-  const countEl = document.getElementById('visitor-count');
-  const flagEl = document.getElementById('visitor-flag');
-
-  function countryCodeToFlag(code) {
-    if (!code || code.length !== 2) return '';
-    return code
-      .toUpperCase()
-      .split('')
-      .map(function (c) {
-        return String.fromCodePoint(0x1f1e6 - 65 + c.charCodeAt(0));
-      })
-      .join('');
-  }
-
-  function updateCount(value) {
-    if (countEl && value != null) countEl.textContent = value.toLocaleString();
-  }
-
-  function updateFlag(countryCode) {
-    if (flagEl) {
-      const flag = countryCodeToFlag(countryCode);
-      flagEl.textContent = flag ? ' · You: ' + flag : '';
-    }
-  }
-
-  // CountAPI: increment once per session, then show count
-  var alreadyCounted = sessionStorage.getItem('visitor_counted') === '1';
-  var countUrl = alreadyCounted
-    ? 'https://api.countapi.xyz/get/' + COUNT_NAMESPACE + '/' + COUNT_KEY
-    : 'https://api.countapi.xyz/hit/' + COUNT_NAMESPACE + '/' + COUNT_KEY;
-
-  fetch(countUrl)
-    .then(function (r) { return r.json(); })
-    .then(function (data) {
-      if (data.value != null) updateCount(data.value);
-      if (!alreadyCounted) sessionStorage.setItem('visitor_counted', '1');
-    })
-    .catch(function () { updateCount('—'); });
-
-  // IP geolocation for current visitor's country flag (ip-api.com, no key)
-  fetch('https://ipapi.co/json/?fields=country_code')
-    .then(function (r) { return r.json(); })
-    .then(function (data) {
-      if (data.country_code) updateFlag(data.country_code);
-    })
-    .catch(function () {});
-})();
 
   </script>
 	</body>
