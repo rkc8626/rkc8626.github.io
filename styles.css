@@ -486,9 +486,26 @@ div#profile {
 }
 
 #publications li p {
-  display: inline;
   margin: 0;
-  font-size: 18px;
+}
+
+#publications .pub-authors {
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+#publications .pub-title {
+  font-size: 1em;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+#publications .pub-venue {
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
+  margin-top: 2px;
+  margin-bottom: 0;
 }
 
 #publications ul {
@@ -522,6 +539,11 @@ div#profile {
 
 #publications .pub-title-link:hover {
   text-decoration: underline;
+}
+
+body.light-mode #publications .pub-title-link:hover {
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(26, 115, 232, 0.25);
 }
 
 #publications .links a:hover {
@@ -606,11 +628,29 @@ div#profile {
 }
 
 footer {
-  display: flex; /* Aligns child elements (left and right sections) horizontally */
+  display: flex;
+  flex-direction: column;
   padding: 10px 50px 10px 50px;
-  justify-content: space-between;
-  align-items: center; /* Aligns items at the start of the flex container */
+  align-items: center;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-flagcounter {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer-flagcounter img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-section {
@@ -714,10 +754,28 @@ header.light-mode {
 
 nav a.light-mode {
   color: black;
+  position: relative;
+}
+
+nav a.light-mode::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #1a73e8, #4285f4);
+  transition: width 0.3s ease;
 }
 
 nav a.light-mode:hover {
-  color: #1a73e8; /* Hover color */
+  color: #1a73e8;
+  font-weight: bold;
+  text-shadow: 0 0 12px rgba(26, 115, 232, 0.35);
+}
+
+nav a.light-mode:hover::after {
+  width: 100%;
 }
 
 /* General Dark Mode Styles */
@@ -801,6 +859,16 @@ button.dark-mode:hover {
   box-shadow:
     0 4px 12px rgba(88, 166, 255, 0.2),
     0 0 20px rgba(88, 166, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Light mode: glowing hover and bold (match dark theme feel) */
+button.light-mode:hover {
+  font-weight: bold;
+  border-color: rgba(26, 115, 232, 0.5);
+  box-shadow:
+    0 4px 12px rgba(26, 115, 232, 0.25),
+    0 0 20px rgba(26, 115, 232, 0.12);
   transform: translateY(-1px);
 }
 
@@ -889,6 +957,23 @@ body.dark-mode .teaching-card:hover {
   border-color: rgba(88, 166, 255, 0.5);
 }
 
+body.light-mode .teaching-card {
+  transition: all 0.3s ease;
+}
+
+body.light-mode .teaching-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow:
+    0 12px 32px rgba(26, 115, 232, 0.18),
+    0 0 0 1px rgba(26, 115, 232, 0.25);
+  border: 1px solid rgba(26, 115, 232, 0.35);
+}
+
+body.light-mode .teaching-card a:hover {
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(26, 115, 232, 0.35);
+}
+
 body.dark-mode .project-card {
   background: linear-gradient(135deg, rgba(28, 33, 40, 0.8) 0%, rgba(22, 27, 34, 0.9) 100%);
   border-radius: 12px;
@@ -904,6 +989,23 @@ body.dark-mode .project-card:hover {
     0 8px 24px rgba(88, 166, 255, 0.15),
     0 0 0 1px rgba(88, 166, 255, 0.2);
   border-color: rgba(88, 166, 255, 0.3);
+}
+
+body.light-mode .project-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.light-mode .project-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 24px rgba(26, 115, 232, 0.15),
+    0 0 0 1px rgba(26, 115, 232, 0.2);
+  border: 1px solid rgba(26, 115, 232, 0.3);
+}
+
+body.light-mode .project-content a:hover {
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(26, 115, 232, 0.35);
 }
 
 /* Card h3 with gradient text */
@@ -1079,6 +1181,24 @@ body.dark-mode #service li:hover {
   transform: translateX(5px);
 }
 
+body.light-mode #publications li,
+body.light-mode #service li {
+  border-left: 3px solid transparent;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+body.light-mode #publications li:hover,
+body.light-mode #service li:hover {
+  border-left-color: #1a73e8;
+  background: linear-gradient(135deg, rgba(26, 115, 232, 0.06) 0%, rgba(66, 133, 244, 0.04) 100%);
+  box-shadow: 0 4px 12px rgba(26, 115, 232, 0.15);
+  transform: translateX(5px);
+  font-weight: bold;
+}
+
 body.dark-mode #publications li p strong {
   background: linear-gradient(135deg, #f0f6fc 0%, #79c0ff 100%);
   -webkit-background-clip: text;
@@ -1091,7 +1211,9 @@ body.dark-mode #publications .links a {
   text-decoration: none;
 }
 
-/* Dark mode for profile section */
+body.dark-mode #publications .pub-venue {
+  color: rgba(230, 237, 243, 0.75);
+}
 body.dark-mode .name {
   background: linear-gradient(135deg, #f0f6fc 0%, #79c0ff 50%, #58a6ff 100%);
   -webkit-background-clip: text;
@@ -1123,6 +1245,12 @@ body.dark-mode .university a:hover,
 body.dark-mode .email a:hover {
   color: #79c0ff;
   text-shadow: 0 0 8px rgba(121, 192, 255, 0.5);
+}
+
+body.light-mode .university a:hover,
+body.light-mode .email a:hover {
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(26, 115, 232, 0.4);
 }
 
 /* Section headings with gradient and underline accent */
@@ -1211,6 +1339,14 @@ body.dark-mode .project-links button:hover {
   transform: translateY(-2px);
 }
 
+body.light-mode .project-links button:hover {
+  font-weight: bold;
+  box-shadow:
+    0 0 18px rgba(35, 134, 54, 0.4),
+    0 4px 12px rgba(35, 134, 54, 0.2);
+  transform: translateY(-2px);
+}
+
 /* Dark mode for hr element */
 body.dark-mode hr {
   border: none;
@@ -1235,6 +1371,19 @@ body.dark-mode .profile-image:hover {
     0 0 40px rgba(88, 166, 255, 0.4),
     0 0 80px rgba(88, 166, 255, 0.2),
     inset 0 0 30px rgba(88, 166, 255, 0.1);
+  transform: scale(1.02);
+}
+
+body.light-mode .profile-image {
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+}
+
+body.light-mode .profile-image:hover {
+  border-color: rgba(26, 115, 232, 0.5);
+  box-shadow:
+    0 0 30px rgba(26, 115, 232, 0.35),
+    0 0 60px rgba(26, 115, 232, 0.15);
   transform: scale(1.02);
 }
 
@@ -1385,6 +1534,13 @@ body.dark-mode pre {
   box-shadow: 0 6px 16px rgba(26, 115, 232, 0.4);
 }
 
+body.light-mode .resume-btn:hover {
+  font-weight: bold;
+  box-shadow:
+    0 6px 16px rgba(26, 115, 232, 0.45),
+    0 0 24px rgba(26, 115, 232, 0.2);
+}
+
 .resume-btn.download-btn {
   background: linear-gradient(135deg, #238636 0%, #2ea043 100%);
   box-shadow: 0 4px 12px rgba(35, 134, 54, 0.3);
@@ -1392,6 +1548,13 @@ body.dark-mode pre {
 
 .resume-btn.download-btn:hover {
   box-shadow: 0 6px 16px rgba(35, 134, 54, 0.4);
+}
+
+body.light-mode .resume-btn.download-btn:hover {
+  font-weight: bold;
+  box-shadow:
+    0 6px 16px rgba(35, 134, 54, 0.5),
+    0 0 24px rgba(35, 134, 54, 0.2);
 }
 
 .resume-viewer {
